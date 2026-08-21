@@ -1,4 +1,4 @@
 interface:
   display_name: "开户行行号自动填充"
-  short_description: "自动联网补全开户行行号，缺少支行时默认使用已核验上级行或总行兜底"
-  default_prompt: "使用 $cnaps-auto-fill 自动搜索并填写缺失的人行行号；无专属行号时默认用已核验上级行或总行兜底，并提示可能有问题的行。"
+  short_description: "仅读取开户行和行号两列，快速补全12位人行行号"
+  default_prompt: "使用 $cnaps-auto-fill 只读取开户行和行号两列，快速补全缺失的人行行号。"

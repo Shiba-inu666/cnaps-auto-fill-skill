@@ -4,6 +4,8 @@ Codex-only Skill for resolving Chinese bank opening-branch names to 12-digit CNA
 
 Codex 专用技能：依据开户行名称补全并核对已有的 12 位 CNAPS／人行支付系统行号。
 
+[查看处理流程图](FLOWCHART.md)
+
 ## Features / 功能
 
 - Reuses a persistent, evidence-backed local CNAPS registry. / 复用带证据来源的持久化本地行号库。

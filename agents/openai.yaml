@@ -1,4 +1,4 @@
 interface:
   display_name: "开户行行号自动填充"
-  short_description: "仅读取两列，快速补全并核对已有12位人行行号"
+  short_description: "仅读取开户行和行号两列，快速补全并核对已有行号"
   default_prompt: "使用 $cnaps-auto-fill 只读取开户行和行号两列，补全空白行号并核对已有行号。"

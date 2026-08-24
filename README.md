@@ -8,7 +8,7 @@ Codex 专用技能：依据开户行名称补全并核对已有的 12 位 CNAPS�
 
 - Reuses a persistent, evidence-backed local CNAPS registry. / 复用带证据来源的持久化本地行号库。
 - After locating headers, reads only the opening-bank and CNAPS-code columns. / 定位表头后只读取开户行和行号两列。
-- Checks existing codes against verified mappings without a separate length check, and reports mismatches without silently overwriting them. / 已有行号直接与已核验映射比较，不单独检查位数；不一致时报告且不静默覆盖。
+- Reports checks as correct, format error, mismatch, or unable to verify. Format errors mean non-digit content; code length is not checked. / 核对结果分为正确、格式错误、不一致、无法确认；格式错误仅指含非数字字符，不检查位数。
 - Searches missing codes with privacy-safe, multi-source verification. / 对缺失行号进行隐私安全的联网搜索和多来源核验。
 - Falls back to the nearest verified parent or head office when no dedicated branch code is usable. / 没有可用支行号时，默认使用最近的已核验上级行或总行号兜底。
 - Warns concisely about fallbacks, conflicts, and unresolved rows. / 简要提示兜底、冲突和未解析记录。

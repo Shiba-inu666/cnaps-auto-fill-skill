@@ -11,9 +11,12 @@ Codex 专用技能：依据开户行名称补全并核对已有的 12 位 CNAPS�
 - Reuses a persistent, evidence-backed local CNAPS registry. / 复用带证据来源的持久化本地行号库。
 - After locating headers, reads only the opening-bank and CNAPS-code columns. / 定位表头后只读取开户行和行号两列。
 - Changes only existing CNAPS cell values and preserves all Excel formatting and workbook structure. / 只修改现有行号单元格的值，完整保留 Excel 格式和工作簿结构。
+- Keeps each input's original format and extension, including Excel variants and delimited text; never converts everything to `.xlsx`. / 保持 Excel、CSV、TSV 等输入的原格式和扩展名，不统一转换为 `.xlsx`。
+- One opened source with an exact bank-name/code match is enough to fill. / 一个已打开且开户行名称与行号明确对应的来源即可填写。
+- Uses an exact target-coordinate allowlist so blank, header, total, note, and decorative rows are never written. / 使用精确目标坐标白名单，绝不写入空白、表头、合计、说明或装饰行。
 - Writes no summaries, audit sheets, comments, or visual markers to Excel; all changes and exceptions are reported in the Codex conversation. / 不向 Excel 写入总结、审计表、批注或视觉标记，所有改动与异常只在 Codex 对话中反馈。
 - Reports checks as correct, format error, mismatch, or unable to verify. Format errors mean non-digit content; code length is not checked. / 核对结果分为正确、格式错误、不一致、无法确认；格式错误仅指含非数字字符，不检查位数。
-- Searches missing codes with privacy-safe, multi-source verification. / 对缺失行号进行隐私安全的联网搜索和多来源核验。
+- Searches missing codes with privacy-safe single-source verification. / 对缺失行号进行隐私安全的单来源核验。
 - Falls back to the nearest verified parent or head office when no dedicated branch code is usable. / 没有可用支行号时，默认使用最近的已核验上级行或总行号兜底。
 - Warns concisely about fallbacks, conflicts, and unresolved rows. / 简要提示兜底、冲突和未解析记录。
 - Never reads other data columns after header detection. / 识别目标列后不再读取其他业务列。

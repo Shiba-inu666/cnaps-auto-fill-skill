@@ -1,4 +1,4 @@
 interface:
   display_name: "开户行行号自动填充"
-  short_description: "只改行号值并保留Excel原格式，在Codex中反馈异常"
-  default_prompt: "使用 $cnaps-auto-fill 只读取两列并只修改行号值，保留 Excel 原格式，把异常和改动反馈在 Codex 对话中。"
+  short_description: "保留原文件格式，只向有效业务行填写已核验行号"
+  default_prompt: "使用 $cnaps-auto-fill 保持原文件格式，只读取两列，只向开户行非空的有效业务行填写行号，一个有效来源即可采用。"

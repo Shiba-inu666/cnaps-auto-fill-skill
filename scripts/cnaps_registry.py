@@ -18,6 +18,7 @@ from urllib.parse import urlparse
 
 
 CODE_RE = re.compile(r"^\d{12}$")
+MIN_EVIDENCE_ORIGINS = 1
 DEFAULT_DB = Path.home() / ".codex" / "state" / "cnaps-auto-fill" / "registry.sqlite3"
 DEFAULT_SEED = Path(__file__).resolve().parent.parent / "assets" / "seed-registry.jsonl"
 
@@ -253,7 +254,7 @@ def upsert_mapping(conn: sqlite3.Connection, record: dict, action: str) -> dict:
         final_status = "retired"
     elif requested_status == "review":
         final_status = "review"
-    elif len(origins) >= 2:
+    elif len(origins) >= MIN_EVIDENCE_ORIGINS:
         final_status = "verified"
     else:
         final_status = "review"
